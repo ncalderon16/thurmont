@@ -1,0 +1,40 @@
+#header {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128, 128, 128, .2);
+    padding: 0 5vw;
+
+    @media (max-width: 800px) {
+        padding: 0 2vw;
+    }
+
+    .header-options {
+        display: flex;
+        justify-content: flex-start;
+        //margin-right: 15vw;
+        gap: 12px;
+    }
+
+    a {
+        padding: 0 10px 0 10px;
+
+        :hover {
+            transition: .3s;
+            color: darkgray;
+        }
+
+        :active {
+            color: #212427;
+        }
+    }
+
+    span {
+        color: #212427;
+        font-size: 20px;
+        font-family: "Inter", serif;
+        font-weight: 600;
+    }
+}
