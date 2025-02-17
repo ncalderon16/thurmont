@@ -107,3 +107,13 @@ a {
         }
     }
 }
+
+.development-page-wrapper {
+    padding: 24px;
+    text-align: center;
+
+    #banff-image {
+        width: 95%;
+        border-radius: 6px;
+    }
+}
