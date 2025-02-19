@@ -109,11 +109,34 @@ a {
 }
 
 .development-page-wrapper {
-    padding: 24px;
     text-align: center;
 
+    h1#development-page-title {
+        @media (max-width: 800px) {
+            font-size: 32px;
+            white-space: nowrap;
+        }
+    }
+
+    .development-page-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 100px);
+    }
+
     #banff-image {
-        width: 95%;
+        max-height: 60vh;
+        max-width: 85vw;
         border-radius: 6px;
+    }
+
+    hr {
+        width: 250px;
+    }
+
+    h4#development-text {
+        margin: 18px;
     }
 }
