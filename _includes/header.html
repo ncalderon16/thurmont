@@ -1,33 +1,60 @@
-<div id="header">
-  <div id="header-logo">
-    <a href="/">
-      <img src="../../image/thurmont-logo.jpg" width="110" height="110">
-    </a>
-  </div>
+<nav class="bg-gray-800" x-data="{ open: false }">
+    <div class="mx-auto max-w-7xl px-4 lg:px-6">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+                <!-- Mobile menu button -->
+                <button
+                        @click="open = !open"
+                        type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Icon when menu is closed -->
+                    <svg class="size-6" :class="{ 'hidden': open, 'block': !open }" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!-- Icon when menu is open -->
+                    <svg class="size-6" :class="{ 'block': open, 'hidden': !open }" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
-  <div class="header-options">
-    <div class="header-option">
-      <a href="/" target="_self">
-        <span class="header-option">Home</span>
-      </a>
+            <div class="flex flex-1 items-center justify-center lg:justify-start">
+                <!-- Brand Name -->
+                <a href="/" target="_self" class="flex items-center lg:pl-0">
+                    <h1 class="text-xl lg:text-3xl font-semibold text-white tracking-wide text-center lg:text-left">
+                        Thurmont <span class="text-green-400">Education</span>
+                    </h1>
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex lg:space-x-6">
+                <a href="/services" target="_self" class="text-base lg:text-lg font-medium text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded-md transition">
+                    Services
+                </a>
+                <a href="/partners" target="_self" class="text-base lg:text-lg font-medium text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded-md transition">
+                    Partners
+                </a>
+                <a href="/about" target="_self" class="text-base lg:text-lg font-medium text-gray-300 hover:text-white hover:bg-gray-700 px-4 py-2 rounded-md transition">
+                    About
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="header-option">
-      <a href="/services" target="_self">
-        <span class="header-option">Services</span>
-      </a>
+    <!-- Mobile Menu -->
+    <div x-show="open" class="lg:hidden">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="/services" target="_self" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                Services
+            </a>
+            <a href="/partners" target="_self" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                Partners
+            </a>
+            <a href="/about" target="_self" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                About
+            </a>
+        </div>
     </div>
-
-    <div class="header-option">
-      <a href="/about" target="_self">
-        <span class="header-option">About</span>
-      </a>
-    </div>
-
-    <div class="header-option">
-      <a href="/partners" target="_self">
-        <span class="header-option">Partners</span>
-      </a>
-    </div>
-  </div>
-</div>
+</nav>
