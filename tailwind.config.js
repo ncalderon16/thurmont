@@ -1,5 +1,9 @@
 module.exports = {
-    content: ['./_site/**/*.html', './_site/**/*.js'],
+    mode: 'jit',
+    content: [
+        './_site/**/*.html',
+        './_site/**/*.js',
+    ],
     theme: {
       extend: {},
     },
