@@ -23,26 +23,13 @@
 <!-- Page Content -->
 <main class="flex-1 w-full">
   <div class="min-h-full">
+    {% unless page.url == '/home' %}
     <header class="bg-white shadow-sm">
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        {% if page.permalink == "/" %}
-        <div class="flex items-center space-x-4">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-            Thurmont Education
-          </h1>
-          <p class="text-lg italic text-gray-600">
-            "A Gateway to Transformational Learning"
-          </p>
-        </div>
-        {% else %}
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-          {{ page.title }}
-        </h1>
-        {% endif %}
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ page.title }}</h1>
       </div>
     </header>
-
-
+    {% endunless %}
     <main>
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         {{ content }}
