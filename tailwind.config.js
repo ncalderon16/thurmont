@@ -3,6 +3,7 @@ module.exports = {
     content: [
         './_site/**/*.html',
         './_site/**/*.js',
+        'node_modules/preline/dist/*.js',
     ],
     theme: {
       extend: {},
@@ -15,5 +16,6 @@ module.exports = {
     },
     plugins: [
         require('daisyui'),
+        require('preline/plugin'),
     ],
 }
