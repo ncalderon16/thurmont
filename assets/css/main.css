@@ -2500,11 +2500,11 @@ details.collapse summary::-webkit-details-marker {
 .gap-y-10 {
   row-gap: 2.5rem;
 }
-.gap-y-16 {
-  row-gap: 4rem;
-}
 .gap-y-6 {
   row-gap: 1.5rem;
+}
+.gap-y-8 {
+  row-gap: 2rem;
 }
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -2568,6 +2568,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .border-\[3px\] {
   border-width: 3px;
+}
+.border-b {
+  border-bottom-width: 1px;
 }
 .border-t {
   border-top-width: 1px;
@@ -2716,6 +2719,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 .pb-6 {
   padding-bottom: 1.5rem;
@@ -3170,6 +3176,10 @@ details.collapse summary::-webkit-details-marker {
 
   .lg\:text-balance {
     text-wrap: balance;
+  }
+
+  .lg\:border-0 {
+    border-width: 0px;
   }
 
   .lg\:px-6 {
