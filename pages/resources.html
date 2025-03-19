@@ -5,7 +5,7 @@ permalink: /resources
 ---
 
 <!-- Articles -->
-<div class="bg-white mb-8 pb-8 sm:py-12 py-8">
+<div class="mb-8 pb-8 sm:py-12 py-8">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <h3 class="text-center text-xl sm:text-2xl font-semibold text-gray-900">Articles</h3>
 
@@ -306,80 +306,33 @@ permalink: /resources
       Our Partners In Health and Wellness
     </h3>
 
-    <div class="mx-auto mt-6 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="mx-auto mt-6 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
+      {% assign partners = "Serenity Med Spa|https://www.serenitymedispa.net|../image/serenity.jpg,
+      Arab American Family Services|https://www.aafsil.org|../image/aafs.jpg,
+      Elemental Care|https://www.elementalcare.clinic|../image/elemental_care.png,
+      Premier Physical Therapy|https://www.premierphysicaltherapy.com|../image/premier-physical-therapy.png" | split: "," %}
 
-      <!-- Serenity Med Spa -->
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
-        <div class="h-36 w-full flex items-center justify-center bg-white">
-          <img class="max-h-[80%] max-w-[80%] object-contain" src="../image/serenity.jpg" alt="Serenity Med Spa">
+      {% for partner in partners %}
+      {% assign details = partner | split: "|" %}
+      <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
+        <div class="h-36 flex items-center justify-center">
+          <img class="max-h-[80%] max-w-[80%] object-contain" src="{{ details[2] }}" alt="{{ details[0] }}">
         </div>
         <div class="p-5 flex flex-col flex-grow text-center">
-          <h5 class="mb-3 text-base font-semibold text-gray-900">Serenity Med Spa</h5>
+          <h5 class="mb-3 text-base font-semibold text-gray-900">{{ details[0] }}</h5>
           <div class="mt-auto">
-            <a href="https://www.serenitymedispa.net" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-700">
+            <a href="{{ details[1] }}" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-700">
               Visit
-              <svg class="w-3.5 h-3.5 ms-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
+              <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
             </a>
           </div>
         </div>
       </div>
-
-      <!-- Arab American Family Services (REDUCED) -->
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
-        <div class="h-36 w-full flex items-center justify-center bg-white">
-          <img class="max-h-[70%] max-w-[70%] object-contain" src="../image/aafs.jpg" alt="Arab American Family Services">
-        </div>
-        <div class="p-5 flex flex-col flex-grow text-center">
-          <h5 class="mb-3 text-base font-semibold text-gray-900">Arab American Family Services</h5>
-          <div class="mt-auto">
-            <a href="https://www.aafsil.org" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-700">
-              Visit
-              <svg class="w-3.5 h-3.5 ms-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Elemental Care (REDUCED) -->
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
-        <div class="h-36 w-full flex items-center justify-center bg-white">
-          <img class="max-h-[70%] max-w-[70%] object-contain" src="../image/elemental_care.png" alt="Elemental Care">
-        </div>
-        <div class="p-5 flex flex-col flex-grow text-center">
-          <h5 class="mb-3 text-base font-semibold text-gray-900">Elemental Care</h5>
-          <div class="mt-auto">
-            <a href="https://www.elementalcare.clinic" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-700">
-              Visit
-              <svg class="w-3.5 h-3.5 ms-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Premier Physical Therapy -->
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col">
-        <div class="h-36 w-full flex items-center justify-center bg-white">
-          <img class="max-h-[85%] max-w-[85%] object-contain" src="../image/premier-physical-therapy.png" alt="Premier Physical Therapy">
-        </div>
-        <div class="p-5 flex flex-col flex-grow text-center">
-          <h5 class="mb-3 text-base font-semibold text-gray-900">Premier Physical Therapy</h5>
-          <div class="mt-auto">
-            <a href="https://www.premierphysicaltherapy.com" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-700">
-              Visit
-              <svg class="w-3.5 h-3.5 ms-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
+
+
   </div>
 </div>
