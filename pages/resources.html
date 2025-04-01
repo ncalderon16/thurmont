@@ -6,21 +6,7 @@ permalink: /resources
 ---
 
 <!-- Articles -->
-<div class="mb-8 pb-8 py-8">
-  <div class="mx-auto px-6 max-w-[1600px] 2xl:px-12 lg:px-8">
-    <div class="mx-auto max-w-lg text-center px-6 py-3 bg-gray-600 rounded-lg shadow-md">
-      <h3 class="text-2xl sm:text-3xl font-bold text-gray-200">
-        Articles
-      </h3>
-      <div class="mt-2 flex justify-center space-x-2">
-        <span class="block w-4 h-1 bg-[#A67C52] rounded"></span>
-        <span class="block w-4 h-1 bg-[#5A7993] rounded"></span>
-        <span class="block w-4 h-1 bg-[#6B8E68] rounded"></span>
-      </div>
-    </div>
-    {% include articles.html %}
-  </div>
-</div>
+{% include articles-layout.html %}
 
 <!-- Partners -->
 <div class="bg-gray-800 py-8 sm:py-14 lg:py-22">
@@ -37,7 +23,7 @@ permalink: /resources
 
       {% for partner in partners %}
       {% assign details = partner | split: "|" %}
-      <div class="w-full max-w-xs md:max-w-sm h-60 bg-gray-200 border border-gray-300 rounded-xl flex flex-col shadow-lg shadow-indigo-500/50">
+      <div class="w-full max-w-xs md:max-w-sm h-60 bg-gray-200 border border-gray-300 rounded-xl flex flex-col shadow-lg shadow-indigo-900">
         <!-- Logo Section -->
         <div class="h-28 flex items-center justify-center border-b border-gray-300">
           <img class="max-h-[80%] max-w-[80%] object-contain" src="{{ details[2] }}" alt="{{ details[0] }}">
