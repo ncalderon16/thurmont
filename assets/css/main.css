@@ -2955,6 +2955,9 @@ details.collapse summary::-webkit-details-marker {
 .leading-relaxed {
   line-height: 1.625;
 }
+.leading-snug {
+  line-height: 1.375;
+}
 .leading-tight {
   line-height: 1.25;
 }
@@ -3284,6 +3287,11 @@ details.collapse summary::-webkit-details-marker {
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .sm\:text-lg {
