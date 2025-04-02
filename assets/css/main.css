@@ -2196,6 +2196,9 @@ details.collapse summary::-webkit-details-marker {
   white-space: nowrap;
   border-width: 0;
 }
+.visible {
+  visibility: visible;
+}
 .invisible {
   visibility: hidden;
 }
@@ -2370,6 +2373,9 @@ details.collapse summary::-webkit-details-marker {
 .\!h-2\.5 {
   height: 0.625rem !important;
 }
+.h-0 {
+  height: 0px;
+}
 .h-1 {
   height: 0.25rem;
 }
@@ -2390,6 +2396,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .h-60 {
   height: 15rem;
+}
+.h-auto {
+  height: auto;
 }
 .h-px {
   height: 1px;
@@ -2940,8 +2949,8 @@ details.collapse summary::-webkit-details-marker {
 .lowercase {
   text-transform: lowercase;
 }
-.leading-loose {
-  line-height: 2;
+.leading-normal {
+  line-height: 1.5;
 }
 .leading-relaxed {
   line-height: 1.625;
@@ -3212,6 +3221,10 @@ details.collapse summary::-webkit-details-marker {
 }
 @media (min-width: 640px) {
 
+  .sm\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .sm\:mr-0 {
     margin-right: 0px;
   }
@@ -3254,8 +3267,7 @@ details.collapse summary::-webkit-details-marker {
     padding-bottom: 3.5rem;
   }
 
-  .sm\:py-8 {
-    padding-top: 2rem;
+  .sm\:pb-8 {
     padding-bottom: 2rem;
   }
 
@@ -3284,8 +3296,8 @@ details.collapse summary::-webkit-details-marker {
     line-height: 1.75rem;
   }
 
-  .sm\:leading-relaxed {
-    line-height: 1.625;
+  .sm\:leading-normal {
+    line-height: 1.5;
   }
 
   .sm\:last\:border-b:last-child {
@@ -3318,6 +3330,14 @@ details.collapse summary::-webkit-details-marker {
   .lg\:my-12 {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
   }
 
   .lg\:flex {

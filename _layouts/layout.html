@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" class=" bg-gray-200">
-  <head>
-    {% include meta-tags.html %}
+<html lang="en" class="bg-gray-200">
+<head>
+  {% include meta-tags.html %}
 
-    <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/common.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
-    <link href='/assets/css/main.css' rel='stylesheet'>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href='/assets/css/main.css' rel='stylesheet'>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <title>{{ page.title }} | Thurmont Education</title>
+  <title>{{ page.title }} | Thurmont Education</title>
 
-    {% include analytics.html %}
-  </head>
+  {% include analytics.html %}
+</head>
 
-  <body class="min-h-screen flex flex-col">
-    {% include header.html %}
+<body class="min-h-screen flex flex-col">
+<div x-data="{ open: false }" class="flex-1 flex flex-col">
+  {% include header.html %}
 
-    <!-- Page Content -->
-    <main class="flex-1">
-      <div class="min-h-full">
-        {% unless page.url == '/home' %}
-        <header class="bg-gray-800">
-          <div class="max-w-7xl px-4 lg:px-12 py-2">
-            <h1 class="text-xl sm:text-2xl font-bold text-gray-300">{{ page.title }}</h1>
-          </div>
-        </header>
-        {% endunless %}
-        <main>
-          <div class="mx-auto">
-            {{ content }}
-          </div>
-        </main>
-      </div>
-    </main>
+  <!-- Page Content -->
+  <main class="flex-grow">
+    <div class="min-h-full">
+      <header class="bg-gray-800 mb-4 lg:mb-8" x-bind:class="{ 'invisible h-0': open, 'visible h-auto': !open }">
+        <div class="max-w-7xl px-4 lg:px-12 py-2">
+          <h1 class="text-xl sm:text-2xl font-bold text-gray-300">{{ page.title }}</h1>
+        </div>
+      </header>
+      <main>
+        <div class="mx-auto">
+          {{ content }}
+        </div>
+      </main>
+    </div>
+  </main>
+</div>
 
-    {% include footer.html %}
+{% include footer.html %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="{{ '/assets/js/preline.js' | relative_url }}"></script>
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="{{ '/assets/js/preline.js' | relative_url }}"></script>
+</body>
 </html>
